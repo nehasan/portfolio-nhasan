@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="assets/vendor/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+    <script src="/assets/vendor/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
     <link href="/assets/vendor/bootstrap-5.2.3-dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link href="/assets/css/main.css" rel="stylesheet">
@@ -13,37 +13,9 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Portfolio | Nahid Hasan Khan</a>
-                <button class="navbar-toggler" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled">Disabled</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <%- include('../shared/layouts/header.html.ejs', {data: data}) %>
     <main>
-        <div class="row p-3">
+        <div class="row p-3 mt-5">
             <!-- div for profile image and intro: start -->
             <div class="col-4">
                 <div class="row profile-image">
@@ -58,9 +30,9 @@
                                 <span class="home-name">Nahid Hasan Khan</span> <br>
                                 <span>Email: nahidhasank27@gmail.com | nahid.hasankhan@ontariotechu.net | nahidcit@iut-dhaka.edu</span> <br>
                                 <span>Phone: +1(905)-922-33XX</span> <br>
-                                <span>Address: 247 Cabot Street, Oshawa, ON, Canada, L1J 5S2</span>
+                                <span>Location: Oshawa, ON, Canada</span>
                             </div>
-                          </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -98,13 +70,13 @@
                     <div class="col">
                         <div class="card">
                             <div class="card-header fw-bolder">
-                              Education Background
+                              Educational Background
                             </div>
                             <div class="card-body">
                                 <!-- education 1: start -->
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="card-title">MASc in Electrical Computer & Software Engineering (Thesis based)</h5>
+                                        <h5 class="card-title">MASc in Electrical Computer & Software Engineering</h5>
                                         <h6 class="card-subtitle mb-2 text-muted">University Ontario Institute of Technology (UOIT), ON, Canada</h6>
                                         <p class="card-text">Year: 2020 - 2021</p>
                                     </div>
@@ -127,7 +99,7 @@
                     <div class="col">
                         <div class="card">
                             <div class="card-header fw-bolder">
-                              Work Experience
+                              Professional Experience
                             </div>
                             <div class="card-body">
                                 <!-- experience 1: start -->
@@ -135,9 +107,12 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Full Stack Software Developer (Hybrid, Fulltime)</h5>
                                         <h6 class="card-subtitle mb-2 text-muted">The Urban Writers, Oakville, ON, Canada</h6>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="card-link">Card link</a>
-                                        <a href="#" class="card-link">Another link</a>
+                                        <p class="card-text">
+                                            Enhanced core features of their in-house platform. Completed few sub-projects including a) managed services b) freelancer application platform and onboarding process. Additionally, also enhanced some of the analytics pages. <br>
+                                            Primary roles: <br>
+                                            Requirement analysis, product development, designing schema and database query optimization, designing systems and system models, writing test codes, code reviewing, discussion and analysis regarding pull requests, daily team meeting and discussions over tasks, direct communication with the different stack holders.
+                                        </p>
+                                        <a href="https://www.theurbanwriters.com" class="card-link">The Urban Writers</a>
                                     </div>
                                 </div>
 
@@ -146,9 +121,12 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Software Engineer (Remote, Part-time)</h5>
                                         <h6 class="card-subtitle mb-2 text-muted">Misfit Technologies, Dhaka, Bangladesh</h6>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="card-link">Card link</a>
-                                        <a href="#" class="card-link">Another link</a>
+                                        <p class="card-text">
+                                            Completed a full admin section of a comprehensive e-commerce solution called shopoth.com. Moreoever, completed a medium sized application leading a small team. <br>
+                                            Primary roles: <br>
+                                            Requirement analysis, product development, designing schema and database query optimization, designing systems and system models, writing test codes, code reviewing, discussion and analysis regarding pull requests, daily team meeting and discussions over tasks, direct communication with the different stack holders, leading small teams.
+                                        </p>
+                                        <a href="https://misfit.tech" class="card-link">Misfit Technologies</a>
                                     </div>
                                 </div>
 
@@ -157,9 +135,14 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Software Engineer (On-site, Fulltime)</h5>
                                         <h6 class="card-subtitle mb-2 text-muted">Nascenia, Dhaka, Bangladesh</h6>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="card-link">Card link</a>
-                                        <a href="#" class="card-link">Another link</a>
+                                        <p class="card-text">
+                                            Joined this company as a fresh graduate and was promoted to software engineer from a junior position. 
+                                            My attachment with this compnay assists me to learn and grow simultaneously.
+                                            With this involvement achieved to finish couple of projects including, Adrevenue: a platform that collects social media data and perform analytics on them, Horsecount : a platform that assists managing horse farms. BrokerPro : a transporation management platform that helps connect customers with the freight carriers. <br>
+                                            Primary roles: <br>
+                                            Requirement analysis, product development, designing schema, designing systems and system models, writing test codes, creating pull requests, daily team meeting and discussions over tasks, direct communication with the different stack holders.
+                                        </p>
+                                        <a href="https://www.nascenia.com" class="card-link">Nascenia</a>
                                     </div>
                                 </div>
                             </div>
@@ -171,8 +154,10 @@
 
         </div>
     </main>
-    <footer class="footer">
+    <!-- main body: end -->
 
-    </footer>
+    <!-- footer: start -->
+    <%- include('../shared/layouts/footer.html.ejs')%>
+    <!-- footer: end -->
 </body>
 </html>

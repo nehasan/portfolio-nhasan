@@ -1,6 +1,7 @@
 import express from "express";
 import bodyParser from 'body-parser';
 import homeRoutes from './routes/home.js';
+import projectsRoutes from './routes/projects.js';
 import path from 'path';
 
 const app = express();
@@ -21,11 +22,14 @@ app.set('view engine', 'ejs');
 
 // define the root path
 app.get('/', (req, res) => {
-    res.render('home/index.html.ejs');
+    res.render('home/index.html.ejs', { data: { action: 'home' } });
 });
 
 // using all other routes
 app.use('/home', homeRoutes);
+
+// using projects routes
+app.use('/projects', projectsRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server running on port: htts://localhost:${PORT}`);

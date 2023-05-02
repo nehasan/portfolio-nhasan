@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="/assets/vendor/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+    <script src="/assets/js/portfolio.main.js"></script>
+    <link href="/assets/vendor/bootstrap-5.2.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <title>Projects|nhasan</title>
+
+    <style type="text/css">
+        .btns-project-nav > .selected {
+            border-bottom: 2px solid;
+        }
+    </style>
+</head>
+<body>
+    <!-- header: start -->
+    <%- include('../shared/layouts/header.html.ejs', {data: data}) %>
+    <!-- header: end -->
+
+    <!-- main: start -->
+    <main>
+        <div class="row p-3 mt-5">
+            <!-- left nav buttons: start -->
+            <div class="col-2 btns-project-nav">
+                <a class="btn btn-light btn-nav btn-professional selected" href="javascript:" style="width: -webkit-fill-available;">Professional Projects</a>
+                <a class="btn btn-light btn-nav btn-academic" href="javascript:" style="width: -webkit-fill-available; margin-top: 10px;">Academic Projects</a>
+                <a class="btn btn-light btn-nav btn-personal" href="javascript:" style="width: -webkit-fill-available; margin-top: 10px;">Personal Projects</a>
+            </div>
+            <!-- left nav buttons: end -->
+
+            <!-- right project desc: start -->
+            <div class="col">
+                <!-- professional projects: start -->
+                <div class="card professional-projects" style="display: block;">
+                    <div class="card-header fw-bolder">
+                      Professional
+                    </div>
+                    <div class="card-body">
+                        <!-- project 1: start -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Project: The Urban Writers</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">A platform to accomplish book writing project for the customers</h6>
+                                <p class="card-text">
+                                    A platform to assist customers completing their book writing / editing / cover designing / illustrating / narrating projects. 
+                                    With the collaboration of platform freelancers and expert admins, this platform has the enhanced capabilities to meet the customers goal or requirements.
+                                    
+                                    <br>
+                                    <br>
+                                    <span class="fw-bolder">Features integrated and developed:</span>
+                                    <ul>
+                                        <li>Enhanced the usability of the application</li>
+                                        <li>Improved some core functionalities of the application</li>
+                                        <li>
+                                            Worked on two major sub-projects:
+                                            <ol>
+                                                <li>Managed services project, where an additional admin attachment is required to manage the book writing / editing flow smoothly,</li>
+                                                <li>Freelancer onboarding process, where job application of new freelancers are maintained from start to onboarding.</li>
+                                            </ol>
+                                        </li>
+                                        <li>Integrated analytics page for managed services</li>
+                                        <li>Integrated analytics page for freelancers</li>
+                                        <li>Resolved issues and bugs related to book writing / editing flow</li>
+                                        <li>Resolved issues and bugs related to direct messaging (DM) system</li>
+                                    </ul>
+
+                                    <span class="fw-bolder">Primary responsibilities:</span>
+                                    <ul>
+                                        <li>Requirement analysis</li>
+                                        <li>System design and schema design</li>
+                                        <li>Writing efficient codes for features and query optimization</li>
+                                        <li>Writing test codes and testing with QA</li>
+                                        <li>Managing tickets on the project management tool</li>
+                                        <li>Developing new features and improving existing features</li>
+                                    </ul>
+                                    Technology stack that we use in this project are Ruby on Rails 6, MySQL, ActiveJobs, ActiveRecords ORM and more. For deployment purpose we used Github CI/CD and server was hosted on Digital Ocean.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- project 1: end -->
+
+                        <!-- project 2: start -->
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Project: Ontario Shores Reminiscene Therapy</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">A platform to perform therapy to the patients with dementia</h6>
+                                <p class="card-text">
+                                    A system that helps people with dementia by showcasing medias such as video, photograph from their old albums. 
+                                    This project collaborates with Ontario Shores Center for Mental Health Services, which manages admins, therapists, patients and their media.
+                                    
+                                    <br>
+                                    <span class="fw-bolder">Features integrated and developed:</span>
+                                    <ul>
+                                        <li>Enhanced the usability of the application</li>
+                                        <li>Improved functionalities to upload media files using AWS S3 API</li>
+                                        <li>Improved carousel to slide medias properly</li>
+                                        <li>Improved media play/pasue automation</li>
+                                        <li>Improved CRUD operations for patients, caregivers and therapists</li>
+                                        <li>Improved admin section</li>
+                                        <li>Integrated functionality to compress media files of a patient and download as a zipped file</li>
+                                        <li>Added tools and libraries to maintain codebase, code structure and file structure</li>
+                                        <li>Added environment variables to heroku platform for deployment automation</li>
+                                    </ul>
+
+                                    <span class="fw-bolder">Primary responsibilities:</span>
+                                    <ul>
+                                        <li>Requirement analysis</li>
+                                        <li>Preparing schema</li>
+                                        <li>System design</li>
+                                        <li>Writing efficient codes for features and query optimization</li>
+                                        <li>Developing new features and improving existing features</li>
+                                    </ul>
+                                    Technology stack: Plain PHP version 4.7, HTML5, CSS3, JavaScript, MySQL, Heroku
+                                </p>
+                            </div>
+                        </div>
+                        <!-- project 2: end -->
+
+                        <!-- project 3: start -->
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Project: Shopoth</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">A comprehensive c-commerce solution</h6>
+                                <p class="card-text">
+                                    An e-commerce solution that ensures fastest deliveries across the several areas of Bangladesh. <br>
+                                    <span class="fw-bolder">Features integrated and developed:</span>
+                                    <ul>
+                                        <li>Developed a backend admin section</li>
+                                        <li>Designed system models for admin section from scratch</li>
+                                        <li>Connected system entities such as products, categories, product items, warehouses, suppliers customers, orders and more</li>
+                                        <li>Developed crud operations for users, user roles, products, categories, items, suppliers, warehouses, locations etc</li>
+                                        <li>Added promotion engine and crud operations for promotions</li>
+                                        <li>Added payment module and gateway</li>
+                                        <li>Added subscription features</li>
+                                        <li>Developed APIs for the features</li>
+                                    </ul>
+
+                                    <span class="fw-bolder">Primary responsibilities:</span>
+                                    <ul>
+                                        <li>Requirement analysis</li>
+                                        <li>Preparing schema</li>
+                                        <li>Preparing models</li>
+                                        <li>System design and data flow</li>
+                                        <li>Design REST APIs</li>
+                                        <li>Design and expose APIs</li>
+                                        <li>Writing efficient codes for features and query optimization</li>
+                                    </ul>
+                                    Assigned as mentor and tech lead to guide the team to deal with implementing the admin section which is the core and largest portion of the application. Other roles involve server configuration, Nginx configuration, writing shell scripts for deployment automation (both back-end and front-end), configuring SSL certificate etc. <br>
+                                    Technology stack: Rails 6 for API, React for front-end, JavaScript, PostgreSQL
+                                </p>
+                            </div>
+                        </div>
+                        <!-- project 3: end -->
+
+                        <!-- project 4: start -->
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Project: Money King Asia</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">A platform to find best insurars in town</h6>
+                                <p class="card-text">
+                                    A Myanmar based project called MoneyKing Asia that assists customers to find the best loans and insurance companies within the local area and helps to connect them to respected companies.
+                                    The primary roles I played in this project are followings: <br>
+                                    <ul>
+                                        <li>Requirement analysis</li>
+                                        <li>Preparing schema</li>
+                                        <li>Connecting several entities such as users, customer, insurance companies, banks and so on</li>
+                                        <li>Preparing models</li>
+                                        <li>System design and data flow</li>
+                                        <li>Design REST APIs</li>
+                                        <li>Design and expose APIs</li>
+                                        <li>Writing efficient codes for features and query optimization</li>
+                                        <li>Developing frontend using ReactJS</li>
+                                    </ul>
+                                    Other roles involve server configuration, Nginx configuration, writing shell scripts for deployment automation (both back-end and front-end), configuring SSL certificate etc. <br>
+                                    Technologies used in this project are Rails 6 for API, React for front-end, JavaScript, PostgreSQL, RESTful APIs.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- project 4: end -->
+
+                        <!-- project 5: start -->
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Project: My Alice</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">A platform to scale e-commerce business leveraging automated bot</h6>
+                                <p class="card-text">
+                                    Integrated Shopify e-commerce to app.myalice.ai to connect Alice customers to Shopify e-commerce and provide opportunities to create orders, search orders, and search products utilizing Shopify APIs.
+                                    The primary roles I played in this project are followings: <br>
+                                    <ul>
+                                        <li>Requirement analysis</li>
+                                        <li>Preparing schema</li>
+                                        <li>Connecting several entities such as users, customer, insurance companies, banks and so on</li>
+                                        <li>Preparing models</li>
+                                        <li>System design and data flow</li>
+                                        <li>Design REST APIs</li>
+                                        <li>Design and expose APIs</li>
+                                        <li>Writing efficient codes for features and query optimization</li>
+                                        <li>Developing frontend using ReactJS</li>
+                                    </ul>
+                                    Other roles involved building docker files for deployment, docker container and server configuration, product deployment on docker. <br>
+                                    Technologies used in this platform are Django for API backend, React for frontend, TypeScript, MongoDB, and PostgreSQL.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- project 5: end -->
+
+                        <!-- project 6: start -->
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Project: BrokerPro</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">A US based comprehensive transportation management system (TMS)</h6>
+                                <p class="card-text">
+                                    Developed a US, Canada and Mexico-based Transport Management System (TMS) login.brokerpro.com which is a comprehensive TMS solution connecting load customers to freight carriers that deal with TL and LTL loads. <br>
+
+                                    <span class="fw-bolder">Features integrated and developed:</span>
+                                    <ul>
+                                        <li>Integrated Automated Recurring Billing (ARB) and Customer Information System (CIM) for monthly subscription charging mechanism using Authorize.net payment gateway API.</li>
+                                        <li>Developed load posting service using third-party load postings APIs such as TruckStop, PostEveryWhere, and Transcom DAT.</li>
+                                        <li>Integrated QuickBooks desktop and QuickBooks Online module that assists import/export customers/carriers invoices, bills and various accounting files to QuickBooks Desktop.</li>
+                                        <li>Developed accounting module for the system that helps generate numerous reports such as invoices, bills, sales report, customers report, freight carriers report and more.</li>
+                                        <li>Developed an extensive dashboard for the system that displays various reports and statistics.Integrated background processes to collect daily statistics.</li>
+                                        <li>Developed other core functionalities of the system in order to run the system efficiently. Technologies used in the project are Rails 4, Ruby 2, HTML5, CSS3, Javascript, Ajax, Mysql, Nginx, and Unicorn.</li>
+                                        <li>AWS EC2 server configuration, SSL certificate configuration, Nginx, web server configuration, rails app server configuration and managed automated application deployment using Capistrano 3.</li>
+                                        <li>Developed Electronic Data Interchange (EDI) service to send invoices and bills to customers and freight carrier companies respectively.</li>
+                                        <li>Optimized queries utilizing joins that made the report generation efficient and faster. Additionally optimized n+1 query inefficiencies.</li>
+                                    </ul>
+
+                                    <span class="fw-bolder">Primary responsibilities:</span>
+                                    <ul>
+                                        <li>Requirement analysis</li>
+                                        <li>Preparing schema</li>
+                                        <li>Connecting several entities such as users, customer companies, loads, rate quotes, carrier companies, invoices, bills, quickbooks invoices, quickbooks bills, subscription and more</li>
+                                        <li>Preparing models</li>
+                                        <li>System design and data flow</li>
+                                        <li>Developing new features and improving existing features</li>
+                                        <li>Learning and integrating quickbooks accounting software simultaneously</li>
+                                        <li>Writing efficient codes for features and query optimization</li>
+                                        <li>Writing test codes and testing</li>
+                                    </ul>
+                                    Other roles involved integrating capistrano gem for automated deployment, AWS server configuration, Nginx server configuration, managing unicorn app server, production releases. <br>
+                                    Technologies: Rails 4, HTML5, CSS, JavaScript, MySQL, AWS EC2/RDS/S3, Cronjob, Job scheduler etc.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- project 6: end -->
+
+                        <!-- project 7: start -->
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Project: Horsecount</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">A web based platform to manage horses in a farm</h6>
+                                <p class="card-text">
+                                    Horsecount is a web-based management system and a market & meeting place for horse-keepers on the web and mobile. <br>
+
+                                    <span class="fw-bolder">Features integrated and developed:</span>
+                                    <ul>
+                                        <li>Worked on features where the platform keeps track on the horse breeding and gestation</li>
+                                        <li>Resolved issues and bugs regarding breeding and gestation cycle</li>
+                                        <li>Resolved bugs and issues of adding or updating horses to the platform with full classification details</li>
+                                        <li>The platform had a social networking portal where horse-keepers could share their posts and it has also chatting system integrated. 
+                                            However, one of my major works was to show available users online like modern chatting systems. <br>
+                                            Integrated PUBNUB real-time socket APIs to broadcast realtime user activities and appearing them online on the available users list.
+                                        </li>
+                                        <li>Resolved other bugs and issues regarding the monthly reporting</li>
+                                    </ul>
+
+                                    <span class="fw-bolder">Primary responsibilities:</span>
+                                    <ul>
+                                        <li>Requirement analysis</li>
+                                        <li>Preparing models</li>
+                                        <li>Developing new features and improving existing features</li>
+                                        <li>Writing efficient codes for features and query optimization</li>
+                                        <li>Writing test codes and testing</li>
+                                    </ul>
+                                    Technologies used: Rails 3, HTML5, JavaScript, CSS, MongoDB, MySQL, Solr, Nginx, AWS EC2/RD.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- project 7: end -->
+
+                        <!-- project 8: start -->
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Project: AdRevenue</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">A web based analytics tool based on social media posts/shares</h6>
+                                <p class="card-text">
+                                    A platform called adrevenu tracks user interaction and their posts on different social networking apps (Facebook, Twitter, LinkedIn etc) and analyzes the data later on by collecting those posts and associated reactions. <br>
+
+                                    <span class="fw-bolder">Features integrated and developed:</span>
+                                    <ul>
+                                        <li>Built the system from scratch</li>
+                                        <li>Integrated user login logout process</li>
+                                        <li>Integrated Facebook APIs to collect Facebook user data</li>
+                                        <li>Integrated Twitter APIs to collect Twitter user data</li>
+                                        <li>Integrated LinkedIn APIs to collect LinkedIn user data</li>
+                                        <li>Developed core functionalities of the system and extensive dashboard analytics using the Chart JS library</li>
+                                    </ul>
+
+                                    <span class="fw-bolder">Primary responsibilities:</span>
+                                    <ul>
+                                        <li>Requirement analysis</li>
+                                        <li>Schema design</li>
+                                        <li>Developing new features</li>
+                                        <li>Writing efficient codes for features and query optimization</li>
+                                        <li>Writing test codes and testing</li>
+                                    </ul>
+                                    Technologies used Rails 4, Ruby 2, HTML5, CSS3, Chart JS, Javascript, Ajax, Mysql, Nginx, and Unicorn.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- project 8: end -->
+                    </div>
+                </div>
+                <!-- professional projects: end -->
+
+                <!-- academic projects: start -->
+                <div class="card academic-projects" style="display: none;">
+                    <div class="card-header fw-bolder">
+                      Academic
+                    </div>
+                    <div class="card-body">
+                        <!-- project 1: start -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Project: Live Traffic Surveillance System</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">An IoT and machine learning based system to monitor road traffic</h6>
+                                <p class="card-text">
+                                    An IoT project titled "Live Traffic Surveillance System" was built using YOLO Version 4, Python Flask framework and Socket.io. The project was able to process live streaming traffic data, then identify and mark the vehicles and immediately send them back to the front-end with the help of socket.io.
+                                    
+                                    <br>
+                                    <span class="fw-bolder">Features integrated and developed:</span>
+                                    <ul>
+                                        <li>Integrated python Flask framework with the back-end</li>
+                                        <li>Integrated NodeJS socket io library</li>
+                                        <li>Sent live streaming data to front-end leveraging the socket io</li>
+                                        <li>Integrated YOLO version 4 to the back-end to process live traffic data and make decision regarding the traffic</li>
+                                    </ul>
+
+                                    <span class="fw-bolder">Primary responsibilities:</span>
+                                    <ul>
+                                        <li>Requirement analysis</li>
+                                        <li>System design and schema design</li>
+                                        <li>Writing efficient codes for features and query optimization</li>
+                                        <li>Developing new features and deployment to the server and github code maintenance</li>
+                                    </ul>
+                                    Technology stack that we use in this project are Python Flask, NodeJS, Socket IO.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- project 1: end -->
+
+                        <!-- project 2: start -->
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Project: Image Reproduction Utilizing Variational Autoencoder</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">An ML tool to reproduce fade images using variational autoencoder</h6>
+                                <p class="card-text">
+                                    A machine learning project titled “Image Reproduction Utilizing Variational Autoencoder”. Autoencoder is straightforward where variational autoencoder reproduces the images with the help of the multivariate distribution of the data points from a small latent space.
+                                    
+                                    <br>
+                                    <span class="fw-bolder">Features integrated and developed:</span>
+                                    <ul>
+                                        <li>Integrated tensorflow and keras libraries with the project</li>
+                                        <li>Built variational autoencoder</li>
+                                    </ul>
+
+                                    <span class="fw-bolder">Primary responsibilities:</span>
+                                    <ul>
+                                        <li>Requirement analysis</li>
+                                        <li>Preparing dataset and download dataset from online ml database</li>
+                                        <li>Building variational autoencoder from scratch</li>
+                                    </ul>
+                                    Technology stack: Python version 3, Tensorflow, Kears, Numpy, Matplotlib etc.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- project 2: end -->
+
+                        <!-- project 3: start -->
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Final Master's Thesis: Clustering Analysis of Lock Contention Fault Types Using Run-time Performance Metrics for Java Intrinsic Locks</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">An unsupervised ML technique to analyze lock contention faults based on run-time performance metrics</h6>
+                                <p class="card-text">
+                                    Synchronization mechanism in java programming language has pros and cons. This mechanism protects data from being corrupted. However, leveraging synchronization
+                                    causes lock contention, that degrades the processing efficiency when threads are gone overflow with an unexpected number of contentions. The vision of this thesis 
+                                    was to analyze the threads behavior by leveraging the collected threads data and running them into an unsupervised ML model.
+                                    
+                                    <br>
+                                    <span class="fw-bolder">Integrations and simulation and analyze:</span>
+                                    <ul>
+                                        <li>Collected some java examples that create excessive lock contention</li>
+                                        <li>Developed a shell program to run contended java examples automatically providing required arguments such as number of threads, number of wait times for threads etc</li>
+                                        <li>Developed a python data collection tool to collect data produced from lock contention and threads</li>
+                                        <li>Developed jupiter-lab python code to analyze collected data leveraging unsupervised machine learning tools such as KMeans, principal component analysis (PCA) etc</li>
+                                    </ul>
+
+                                    <span class="fw-bolder">Primary responsibilities:</span>
+                                    <ul>
+                                        <li>Requirement analysis</li>
+                                        <li>Developing the system to analyze lock contention faults</li>
+                                        <li>Categorizing lock contention faults</li>
+                                        <li>Writing thesis paper</li>
+                                    </ul>
+                                    
+                                    Technologies used: Python version 3, Numpy, KMeans, PCA, Matplotlib
+                                </p>
+                            </div>
+                        </div>
+                        <!-- project 3: end -->
+                    </div>
+                </div>
+                <!-- academic projects: end -->
+
+                <!-- personal projects: start -->
+                <div class="card personal-projects" style="display: none;">
+                    <div class="card-header fw-bolder">
+                      Personal
+                    </div>
+                    <div class="card-body">
+                        <!-- project 1: start -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"></h5>
+                                <h6 class="card-subtitle mb-2 text-muted">An IoT and machine learning based system to monitor road traffic</h6>
+                                <h6 class="card-subtitle mb-2 text-muted">Master's course project</h6>
+                                <p class="card-text">
+                                    An IoT project titled "Live Traffic Surveillance System" was built using YOLO Version 4, Python Flask framework and Socket.io. The project was able to process live streaming traffic data, then identify and mark the vehicles and immediately send them back to the front-end with the help of socket.io.
+                                    
+                                    <br>
+                                    <span class="fw-bolder">Features integrated and developed:</span>
+                                    <ul>
+                                        <li>Integrated python Flask framework with the back-end</li>
+                                        <li>Integrated NodeJS socket io library</li>
+                                        <li>Sent live streaming data to front-end leveraging the socket io</li>
+                                        <li>Integrated YOLO version 4 to the back-end to process live traffic data and make decision regarding the traffic</li>
+                                    </ul>
+
+                                    <span class="fw-bolder">Primary responsibilities:</span>
+                                    <ul>
+                                        <li>Requirement analysis</li>
+                                        <li>System design and schema design</li>
+                                        <li>Writing efficient codes for features and query optimization</li>
+                                        <li>Developing new features and deployment to the server and github code maintenance</li>
+                                    </ul>
+                                    Technology stack that we use in this project are Python Flask, NodeJS, Socket IO.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- project 1: end -->
+
+                        <!-- project 2: start -->
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Project: Image Reproduction Utilizing Variational Autoencoder</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">An ML tool to reproduce fade images using variational autoencoder</h6>
+                                <p class="card-text">
+                                    A machine learning project titled “Image Reproduction Utilizing Variational Autoencoder”. Autoencoder is straightforward where variational autoencoder reproduces the images with the help of the multivariate distribution of the data points from a small latent space.
+                                    
+                                    <br>
+                                    <span class="fw-bolder">Features integrated and developed:</span>
+                                    <ul>
+                                        <li>Integrated tensorflow and keras libraries with the project</li>
+                                        <li>Built variational autoencoder</li>
+                                    </ul>
+
+                                    <span class="fw-bolder">Primary responsibilities:</span>
+                                    <ul>
+                                        <li>Requirement analysis</li>
+                                        <li>Preparing dataset and download dataset from online ml database</li>
+                                        <li>Building variational autoencoder from scratch</li>
+                                    </ul>
+                                    Technology stack: Python version 3, Tensorflow, Kears, Numpy, Matplotlib etc.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- project 2: end -->
+
+                        <!-- project 3: start -->
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Final Master's Thesis: Clustering Analysis of Lock Contention Fault Types Using Run-time Performance Metrics for Java Intrinsic Locks</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">An unsupervised ML technique to analyze lock contention faults based on run-time performance metrics</h6>
+                                <p class="card-text">
+                                    Synchronization mechanism in java programming language has pros and cons. This mechanism protects data from being corrupted. However, leveraging synchronization
+                                    causes lock contention, that degrades the processing efficiency when threads are gone overflow with an unexpected number of contentions. The vision of this thesis 
+                                    was to analyze the threads behavior by leveraging the collected threads data and running them into an unsupervised ML model.
+                                    
+                                    <br>
+                                    <span class="fw-bolder">Integrations and simulation and analyze:</span>
+                                    <ul>
+                                        <li>Collect some java examples that create excessive lock contention</li>
+                                        <li>Developed a shell program to run contended java examples automatically providing some argument such as number of threads, number of wait times for threads etc</li>
+                                        <li>Developed python data collection tool to collect data produced from lock contention and threads</li>
+                                        <li>Developed jupiter-lab python code to analyze collected data leveraging unsupervised machine learning tools such as KMeans, principal component analysis (PCA) etc</li>
+                                    </ul>
+
+                                    <span class="fw-bolder">Primary responsibilities:</span>
+                                    <ul>
+                                        <li>Requirement analysis</li>
+                                        <li>Developing the system to analyze lock contention faults</li>
+                                        <li>Categorizing lock contention faults</li>
+                                        <li>Writing thesis paper</li>
+                                    </ul>
+                                    
+                                    Technologies used: Python version 3, Numpy, KMeans, PCA, Matplotlib
+                                </p>
+                            </div>
+                        </div>
+                        <!-- project 3: end -->
+                    </div>
+                </div>
+                <!-- academic projects: end -->
+            </div>
+            <!-- right project desc: start -->
+
+        </div>
+    </main>
+    <!-- main: end -->
+
+    <!-- footer: start -->
+    <%- include('../shared/layouts/footer.html.ejs')%>
+    <!-- footer: end -->
+</body>
+</html>
