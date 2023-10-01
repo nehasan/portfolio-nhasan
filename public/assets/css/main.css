@@ -3,3 +3,18 @@
     font-size: larger;
     color: brown;
 }
+
+main {
+    min-height: 100vh;
+}
+
+.text-wrap1 {
+    background-color: #edfbfc;
+    width: fit-content;
+    border: 1px solid cadetblue;
+    padding: 1px;
+    border-radius: 3px;
+    color: cadetblue;
+    /* box-shadow: 1px 1px 1px 1px; */
+    font-size: x-small;
+}

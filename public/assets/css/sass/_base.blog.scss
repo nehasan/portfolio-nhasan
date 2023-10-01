@@ -1,0 +1,82 @@
+// salmon red varient
+$color-indian-red: #CD5C5C;
+$color-salmon: #FA8072;
+$color-salmon-light: #FDEDEC;
+$color-light-coral: #F08080;
+$color-light-salmon: #FFA07A;
+
+.text-wrap-salmon {
+    background-color: $color-salmon-light;
+    width: fit-content;
+    border: 1px solid $color-salmon;
+    padding: 1px;
+    border-radius: 3px;
+    color: $color-salmon;
+    font-size: small;
+    text-align: center;
+}
+// salmon red varient end
+
+// maroon red varient: start
+$color-maroon-dark: #922B21;
+$color-maroon-light: #F2D7D5;
+
+.text-wrap-maroon {
+    background-color: $color-maroon-light;
+    width: fit-content;
+    border: 1px solid $color-maroon-dark;
+    padding: 1px;
+    border-radius: 3px;
+    color: $color-maroon-dark;
+    font-size: small;
+    text-align: center;
+}
+// maroon red varient end
+
+// light violet varient: start
+$color-light-violet-dark: #76448A;
+$color-light-violet-light: #EBDEF0;
+
+.text-wrap-light-violet {
+    background-color: $color-light-violet-light;
+    width: fit-content;
+    border: 1px solid $color-light-violet-dark;
+    padding: 1px;
+    border-radius: 3px;
+    color: $color-light-violet-dark;
+    font-size: small;
+    text-align: center;
+}
+// light violet varient end
+
+// cadet blue varient start
+$color-cadet-blue-light: #edfbfc;
+$color-cadet-blue-dark: #1F618D;
+
+.text-wrap-cadet-blue {
+    background-color: $color-cadet-blue-light;
+    width: fit-content;
+    border: 1px solid $color-cadet-blue-dark;
+    padding: 1px;
+    border-radius: 3px;
+    color: $color-cadet-blue-dark;
+    font-size: small;
+    text-align: center;
+}
+// cadet blue varient end
+
+// water green varient start
+$color-water-green-light: #D0ECE7;
+$color-water-green-dark: #117864;
+
+.text-wrap-water-green {
+    background-color: $color-water-green-light;
+    width: fit-content;
+    border: 1px solid $color-water-green-dark;
+    padding: 1px;
+    border-radius: 3px;
+    color: $color-water-green-dark;
+    font-size: small;
+    text-align: center;
+}
+// water green varient end

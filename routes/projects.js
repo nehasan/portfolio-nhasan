@@ -10,4 +10,8 @@ router.get('/', (req, res) => {
     res.render('projects/index.html.ejs', { data: data });
 });
 
+router.get('/games/birdncrosshair', (req, res) => {
+    res.render('projects/games/birdncrosshair.html.ejs');
+})
+
 export default router;

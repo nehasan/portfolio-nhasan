@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/assets/vendor/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+    <link href="/assets/vendor/bootstrap-5.2.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <title>Admin|Panel</title>
+</head>
+<body>
+    <!-- admin panel header: start -->
+    <%- include('../shared/header.html.ejs', { data: data }) %>
+    <!-- admin panel header: end -->
+
+    <!-- admin panel body: start -->
+    <main>
+        <div class="row p-3 mt-5">
+            <div class="row">
+                <div class="col">
+                    <a href="/admin/blog/new" class="btn btn-primary">+ New Blog</a>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">All Articles</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Manage the articles</h6>
+                            <% if (data['blogs'] === undefined || data['blogs'] == []) { %>
+                                <tr>No available blogs</tr>
+                            <% } else { %>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Title</th>
+                                            <th>Author</th>
+                                            <th>Published On</th>
+                                            <th>Link</th>
+                                            <th>Description</th>
+                                            <th>Keywords</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% data['blogs'].forEach(function(blog) { %>
+                                            <tr>
+                                                <td><%= blog.index %></td>
+                                                <td><%= blog.title %></td>
+                                                <td><%= blog.author %></td>
+                                                <td><%= blog.published_on %></td>
+                                                <td><%= blog.link %></td>
+                                                <td><%= blog.description.substring(0, 250).concat('...') %></td>
+                                                <td><%= blog.keywords %></td>
+                                                <td>
+                                                    <a href="/admin/blog/<%= blog.id %>">View</a> </br>
+                                                    <a href="/admin/blog/edit/<%= blog.id %>">Edit</a> </br>
+                                                    <a href="#" type="submit">Delete</a>
+                                                </td>
+                                            </tr>
+                                        <% }) %>
+                                    </tbody>
+                                </table>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </main>
+    <!-- admin panel body: end -->
+
+    <!-- admin panel footer: start -->
+    <%- include('../../shared/layouts/footer.html.ejs') %>
+    <!-- admin panel footer: end -->
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/assets/vendor/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+    <link href="/assets/vendor/bootstrap-5.2.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+
+    <title>Admin|Panel</title>
+</head>
+<body>
+    <!-- admin panel header: start -->
+    <%- include('./shared/header.html.ejs', { data: data }) %>
+    <!-- admin panel header: end -->
+
+    <!-- admin panel body: start -->
+    <main>
+        <div class="row p-3 mt-5">
+            <!-- left nav buttons: start -->
+            <div class="col-2 btns-admin-nav">
+                <a class="btn btn-light btn-nav btn-settings selected" href="javascript:" style="width: -webkit-fill-available;">Profile Settings</a>
+                <a class="btn btn-light btn-nav btn-blogs" href="javascript:" style="width: -webkit-fill-available; margin-top: 10px;">Archive</a>
+                <a class="btn btn-light btn-nav btn-other" href="javascript:" style="width: -webkit-fill-available; margin-top: 10px;">Other</a>
+            </div>
+            <!-- left nav buttons: end -->
+            
+            <!--<div class="row">
+                <div class="col mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Profile Settings</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Update your profile</h6>
+                            <button type="" class="btn btn-sm btn-primary">Upload profile photo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+
+            <!-- admin panel archived blogs: start -->
+            <div class="col">
+                <h4>All Articles</h4>
+                <div class="col mb-3">
+                    <% if (data['blogs'] === undefined || data['blogs'] === []) { %>
+                        <p>No available articles</p>
+                    <% } else { %>
+                        <% data['blogs'].forEach(function(blog) { %>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title"><%= blog.title %></h5>
+                                    <div class="card-text">
+                                        <span>By <%= blog.author %> on <%= blog.published_on.toLocaleDateString() %> <%= blog.published_on.toLocaleTimeString() %></span>
+                                        </br>
+                                        <% let textWrapColors = ['salmon', 'maroon', 'cadet-blue', 'light-violet', 'water-green'] %>
+                                        <% blog.keywords.split(',').forEach((item) => { %>
+                                            <% const rndInt = Math.floor(Math.random() * 4) + 1 %>
+                                            <span class="text-wrap-<%= textWrapColors[rndInt] %>"><%= item %></span>
+                                        <% }) %>
+                                        </br>
+                                        <div class=""><%= blog.description.substring(0, 250).concat('...') %></div>
+                                        <a href="/blogs/<%= blog.id %>">Read More...</a>
+                                    </div>
+                                </div>
+                            </div>
+                        <% }) %>
+                    <% } %>
+
+                    <!--<div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">All Articles</h4>
+                            <h6 class="card-subtitle mb-2 text-muted">Manage your blogs</h6>
+                            <% if (data['blogs'] === undefined || data['blogs'] == []) { %>
+                                <tr>No available blogs</tr>
+                            <% } else { %>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Title</th>
+                                            <th>Author</th>
+                                            <th>Published On</th>
+                                            <th>Link</th>
+                                            <th>Description</th>
+                                            <th>Keywords</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% data['blogs'].forEach(function(blog) { %>
+                                            <tr>
+                                                <td><%= blog.index %></td>
+                                                <td><%= blog.title %></td>
+                                                <td><%= blog.author %></td>
+                                                <td><%= blog.published_on %></td>
+                                                <td><%= blog.link %></td>
+                                                <td><%= blog.description %></td>
+                                                <td><%= blog.keywords %></td>
+                                                <td>
+                                                    <a href="#">Edit</a>
+                                                    <a href="#" type="submit">Delete</a>
+                                                </td>
+                                            </tr>
+                                        <% }) %>
+                                    </tbody>
+                                </table>
+                            <% } %>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+            <!-- admin panel archived blogs: end -->
+        </div>
+    </main>
+    <!-- admin panel body: end -->
+
+    <!-- admin panel footer: start -->
+    <%- include('../shared/layouts/footer.html.ejs') %>
+    <!-- admin panel footer: end -->
+</body>
+</html>

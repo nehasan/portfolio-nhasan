@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="/assets/vendor/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+    <link href="/assets/vendor/bootstrap-5.2.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/icons/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet">
+    <title>Admin|Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col mt-5">
+                <div class="card mb-3" style="width: 20rem;">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                        <form action="/admin/login" method="post">
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Email</label>
+                                <input type="email"
+                                        class="form-control"
+                                        id="username"
+                                        name="username"
+                                        placeholder="name@example.com" 
+                                        required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password"
+                                        class="form-control" 
+                                        id="password" 
+                                        name="password" 
+                                        placeholder="**********" 
+                                        required>
+                            </div>
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-success w-100">Login</button>
+                            </div>
+                            <div class="mb-3">
+                                <a href="/" class="btn btn-primary w-100"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;Back to Porfolio</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+</body>
+</html>

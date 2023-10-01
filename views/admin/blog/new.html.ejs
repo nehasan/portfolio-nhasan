@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/assets/vendor/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/assets/vendor/bootstrap-5.2.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.2/classic/ckeditor.js"></script>
+    <script src="/assets/vendor/jquery/jquery-3.7.0.min.js"></script>
+    <script src="/assets/vendor/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="/assets/vendor/jquery-ui-1.13.2/jquery-ui.min.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <title><%= title %></title>
+</head>
+<body>
+    <!-- new blog header: start -->
+    <%- include('../shared/header.html.ejs', { data: data }) %>
+    <!-- new blog header: end -->
+
+    <!-- new blog body: start -->
+    <main>
+        <div class="row p-3 mt-5">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">New Blog</h5>
+                        <!-- <h6 class="card-subtitle mb-2 text-muted">Create new blog</h6> -->
+
+                        <form id="create-blog-form" action="/admin/blog/create" method="post" onsubmit="onSubmitCreateBlog()">
+                            <div class="mb-3">
+                                <label for="title" class="form-label">Title</label>
+                                <input type="text" class="form-control" id="title" name="title" placeholder="Enter blog title">
+                            </div>
+    
+                            <div class="mb-3">
+                                <label for="author" class="form-label">Author</label>
+                                <input type="text" class="form-control" id="title" name="author" placeholder="Enter blog author">
+                                <!-- <textarea class="form-control" id="author" rows="3"></textarea> -->
+                            </div>
+    
+                            <div class="mb-3">
+                                <label for="published-on" class="form-label">Published on</label>
+                                <input type="text" class="form-control" id="published-on" name="published_on" placeholder="Enter published on">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="link" class="form-label">Link</label>
+                                <input type="text" class="form-control" id="link" name="link" placeholder="Enter link for the blog">
+                            </div>
+    
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Description</label>
+                                <input type="hidden" id="description" name="description">
+                                <div id="editor"></div>
+                            </div>
+            
+                            <div class="mb-3">
+                                <label for="keywords" class="form-label">Keywords</label>
+                                <input type="text" class="form-control" id="keywords" name="keywords" placeholder="Enter blog keywords">
+                            </div>
+
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-success">Create</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- new blog body: end -->
+
+    <!-- new blog footer: start -->
+    <%- include('../../shared/layouts/footer.html.ejs') %>
+    <!-- new blog footer: end -->
+</body>
+</html>
+
+<script type="application/javascript">
+
+    let editor;
+
+    function onSubmitCreateBlog() {
+        const ckeditorValue = editor.getData();
+        console.log('--- CKEDITOR VAL: ', ckeditorValue);
+        document.getElementById("description").value = ckeditorValue;
+        document.getElementById('create-blog-form').submit();
+    }
+
+    $(document).ready(function() {
+        $('#published-on').datepicker();
+
+        ClassicEditor
+            .create(document.querySelector( '#editor' ))
+            .then(newEditor => {
+                editor = newEditor;
+            })
+            .catch(error => {
+                console.error( error );
+        });
+    });
+</script>
